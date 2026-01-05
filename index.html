@@ -1,141 +1,139 @@
+
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hadad Wildan- Tech Enthusiast</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-:root {
-    --bg-box: rgba(255,255,255,0.75);
-    --text-color: #222;
-    --btn-color: #8fa3a0;
-}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-body.dark {
-    --bg-box: rgba(0,0,0,0.65);
-    --text-color: #f1f1f1;
-    --btn-color: #445b5a;
-}
+  <link rel="stylesheet" href="styles.css">
 
-body {
-    min-height: 100vh;
-    background: url("img/bg.jpg") no-repeat center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.5s ease;
-}
-
-.container {
-    width: 90%;
-    max-width: 420px;
-    text-align: center;
-    padding: 40px 20px;
-    background: var(--bg-box);
-    backdrop-filter: blur(5px);
-    border-radius: 15px;
-    color: var(--text-color);
-    animation: fadeUp 1s ease;
-}
-
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.profile {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid white;
-    margin-bottom: 15px;
-}
-
-h1 {
-    letter-spacing: 2px;
-    margin-bottom: 5px;
-}
-
-p {
-    font-size: 14px;
-    margin-bottom: 30px;
-    opacity: 0.8;
-}
-
-.btn {
-    display: block;
-    width: 100%;
-    padding: 18px;
-    margin: 15px 0;
-    background: var(--btn-color);
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
-    letter-spacing: 2px;
-    font-weight: bold;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-}
-
-.toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: black;
-    color: white;
-    border: none;
-    padding: 10px 14px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 16px;
-}
-</style>
+  <title>Portfolio</title>
 </head>
-
 <body>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="left">
+      <a href="/">Hadad Wildan Pratama</a>
+    </div>
+    
 
-<button class="toggle" onclick="toggleDark()">🌙</button>
+    <div class="right">
+      <a href="http://github.com" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github"></i>
+        <span>Github</span>
+      </a>
+      
+      <a href="http://linkedin.com//in/hadad-wildan-pratama-3a57b2228" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin"></i>
+        <span>Linkedin</span>
+      </a>
+      
+      <a href="http://instagram.com/urwilldd?igsh=a2JtcmRpeWUyOTlw" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-instagram"></i>
+        <span>instagram</span>
+      </a>
+       
+    </div>
+  </nav>
 
-<div class="container">
-    <img src="img/profile.jpg" class="profile">
-    <h1>HADAD WILDAN</h1>
-    <p>TECH ENTHUSIAST</p>
+  <main>
+    <!-- SECTION 1: Hero -->
+    <section class="hero-section">
+      <div class="text">
+        <h2>Hi, I'm Wildan 👋</h2>
+        <p>I am a tech enthusiast with a strong interest in computer networking and IT infrastructure.
+             Currently working in an ISP environment, I am actively involved in network operations, troubleshooting,
+             and real-world technical problem solving. I continuously develop my skills through hands-on practice, self-learning,
+             and formal studies, with a focus on building reliable, efficient, and scalable network systems.</p>
 
-    <a href="https://github.com/username" class="btn">GITHUB</a>
-    <a href="https://linkedin.com/in/username" class="btn">LINKEDIN</a>
-    <a href="https://instagram.com/username" class="btn">INSTAGRAM</a>
-    <a href="https://t.me/username" class="btn">TELEGRAM</a>
-</div>
+        <div class="links">
+            
+          <a href="#skills">
+            <i class="fa-solid fa-code"></i>
+            <span>Skills</span>
+          </a>
+          
+          <a href="#contact">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Contact</span>
+          </a>
+        </div>
+      </div>
 
-<script>
-function toggleDark() {
-    document.body.classList.toggle("dark");
-    localStorage.setItem("darkMode", document.body.classList.contains("dark"));
-}
+      <div class="headshot">
+        <img src="hero-headshot.webp" alt="Foto wildan">
+      </div>
+    </section>
 
-if (localStorage.getItem("darkMode") === "true") {
-    document.body.classList.add("dark");
-}
-</script>
+    <!-- SECTION 2: Skills -->
+    <section id="skills" class="skills-section">
+      <h2>Skills</h2>
+      <div class="text">
+            I have hands-on experience and a strong interest in computer networking and ISP infrastructure,
+            with a focus on MikroTik and Cisco-based networks. I am familiar with routing, NAT, firewall configuration, 
+            VLANs, and bandwidth management. I also have experience working in FTTH environments, including access network
+            architecture, OLT and ONT configuration, PPPoE, 
+            and end-to-end network troubleshooting from customer side to core network
+         </div>
 
+      <div class="cells">
+        <div class="cell">
+          <img src="images/html-logo.webp" alt="html logo">
+          <span>HTML</span>
+        </div>
+        
+        <div class="cell">
+          <img src="images/css-logo.webp" alt="css logo">
+          <span>CSS</span>
+        </div>
+        
+        <div class="cell">
+          <img src="images/javascript-logo.webp" alt="javascript logo">
+          <span>JavaScript</span>
+        </div>
+        
+        <div class="cell">
+          <img src="images/node-logo.webp" alt="node logo">
+          <span>Node.js</span>
+        </div>
+        
+        <div class="cell">
+          <img src="images/react-logo.webp" alt="react logo">
+          <span>React.js</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Contact -->
+    <section id="contact" class="contact-section">
+      <h2>Contact</h2>
+
+      <div class="group">
+        <div class="text">
+            Kritik dan saran
+        </div>
+
+        <form>
+          <label for="name">Name</label>
+          <input type="text" id="name">
+
+          <label for="email">Email</label>
+          <input type="email" id="email">
+
+          <label for="message">Message</label>
+          <textarea id="message" cols="30" rows="10"></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
