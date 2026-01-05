@@ -103,10 +103,20 @@ nav .right a span {
   justify-content: right;
 }
 
-.hero-section .headshot img {
-  width: 350px;
-  border-radius: 80%;
+.avatar {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  overflow: hidden;
 }
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
 
 /* SECTION 2: Skills */
 .skills-section {
@@ -327,4 +337,42 @@ nav .right a span {
   .contact-section {
     padding: 0 20px;
   }
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .navbar .right {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .navbar .right {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .navbar .left {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .avatar {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+
 }
